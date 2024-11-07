@@ -16,10 +16,13 @@ public class DebugRockPaperScissors {
      * @return 0 si hi ha un empat; 1 si guanya jugador1; 2 si guanya jugador 2.
      */
     public static int guanya(String jugador1, String jugador2){
+        jugador1 = jugador1.toLowerCase();
+        jugador2 = jugador2.toLowerCase();
+
         if(jugador1.equals(jugador2))
             return 0;
         else if (jugador1.equals("paper")) {
-            return jugador2.equals("pedra") ? 1 : 2;
+            return jugador2.equals("pedra") ? 2 : 1;
         } else if (jugador1.equals("pedra")) {
             return jugador2.equals("paper") ? 1 : 2;
         } else {
